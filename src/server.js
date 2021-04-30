@@ -174,4 +174,4 @@ app.get("/episodes/:id", (request, response) =>
   response.json(episodes.find((episode) => (episode.id = request.params.id)))
 );
 
-app.listen(3000);
+app.listen(process.env.PORT, () => console.log("Server started"));
